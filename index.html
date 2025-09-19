@@ -6,12 +6,10 @@
     <title>Cinematic Realty Media — Real Estate FPV & Media</title>
     <meta name="description" content="FPV cinematic real estate tours, aerials, photos, reels, and 3D for agents and developers. Fast delivery, professional editing, multi-city coverage." />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -34,7 +32,6 @@
       };
     </script>
 
-    <!-- Preload del logo local -->
     <link rel="preload" as="image" href="/assets/logo.png">
 
     <style>
@@ -125,13 +122,11 @@
   </head>
   <body class="bg-obsidian text-ink font-sans antialiased">
 
-<!-- NAV -->
 <header class="fixed inset-x-0 top-0 z-50">
   <div class="mx-auto max-w-7xl px-5">
     <div class="mt-5 mb-3 rounded-2xl glass bg-white/5 ring-1 ring-white/10">
       <div class="flex items-center justify-between px-4 py-2">
 
-        <!-- Logo + Marca -->
         <a href="#home" class="flex items-center gap-3">
           <img
             src="/assets/logo.png"
@@ -142,7 +137,6 @@
           </span>
         </a>
 
-        <!-- Menú (desktop) -->
         <nav class="hidden md:flex items-center gap-8 text-base font-semibold text-black">
           <a href="#work" class="hover:opacity-70">Portfolio</a>
           <a href="#services" class="hover:opacity-70">Services</a>
@@ -156,17 +150,15 @@
           </a>
         </nav>
 
-        <!-- Botón menú (mobile) -->
         <button id="menuBtn"
           class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg ring-1 ring-white/20"
           aria-label="Open menu">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-white/80">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-gray-600">
             <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
       </div>
 
-      <!-- Menú (mobile) -->
       <div id="mobileMenu" class="hidden border-t border-white/10 px-4 py-3 md:hidden">
         <div class="grid gap-3 text-sm text-white/90 font-semibold">
           <a href="#work" class="hover:text-white">Portfolio</a>
@@ -184,12 +176,10 @@
   </div>
 </header>
 
-    <!-- HERO SECTION -->
     <section id="home" class="hero-bg min-h-screen flex items-center pt-28 md:pt-24">
       <div class="hero-content w-full">
         <div class="mx-auto max-w-7xl px-5">
           <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-            <!-- Left Column -->
             <div class="space-y-8">
               <div class="space-y-6">
                 <div class="inline-flex items-center gap-2 tech-badge rounded-full px-4 py-2 text-sm font-medium mt-2 md:mt-0">
@@ -242,7 +232,6 @@
               </div>
             </div>
 
-            <!-- Right Column (drone) -->
             <div class="relative">
               <div class="relative floating-element">
                 <img
@@ -250,7 +239,6 @@
                   alt="DJI Avata FPV drone"
                   class="w-64 sm:w-80 md:w-full md:max-w-lg mx-auto drop-shadow-2xl"
                 />
-                <!-- SOLO MOBILE: ocultar anillos -->
                 <div class="absolute inset-0 hidden md:flex items-center justify-center">
                   <div class="w-96 h-96 rounded-full border border-accent/20 absolute animate-spin" style="animation-duration:20s;"></div>
                   <div class="w-80 h-80 rounded-full border border-accent/10 absolute animate-spin" style="animation-duration:15s;animation-direction:reverse;"></div>
@@ -263,7 +251,6 @@
     </section>
 
 
-    <!-- PROCESS -->
     <section class="py-20 bg-[#F7F8FA] text-slate-900">
       <div class="mx-auto max-w-7xl px-5">
         <div class="mb-16 text-center">
@@ -338,7 +325,6 @@
           </div>
         </div>
 
-        <!-- Statistics Section -->
         <div class="mt-12 md:mt-20 bg-slate-900 rounded-3xl p-4 md:p-12 text-white">
           <div class="grid grid-cols-4 gap-4 text-center">
             <div>
@@ -362,7 +348,6 @@
       </div>
     </section>
     
-<!-- PRICING -->
 <section id="pricing" class="py-20 bg-[#F7F8FA] text-slate-900">
   <div class="mx-auto max-w-7xl px-5">
     <header class="text-center mb-12">
@@ -373,7 +358,6 @@
     </header>
 
     <div class="grid gap-6 md:grid-cols-3">
-      <!-- Essential -->
       <article class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-200 hover:shadow-xl transition">
         <div class="text-sm font-semibold text-slate-500">Essential</div>
         <div class="mt-2 text-4xl font-bold tracking-tight">$299</div>
@@ -390,7 +374,6 @@
         </a>
       </article>
 
-      <!-- Professional -->
       <article class="relative rounded-2xl bg-white p-8 shadow-xl ring-2 ring-accent/50 hover:shadow-2xl transition">
         <div class="absolute -top-3 right-6 rounded-full bg-accent px-3 py-1 text-xs font-bold text-black shadow">Most Popular</div>
         <div class="text-sm font-semibold text-slate-500">Professional</div>
@@ -409,7 +392,6 @@
         </a>
       </article>
 
-      <!-- Premium -->
       <article class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-200 hover:shadow-xl transition">
         <div class="text-sm font-semibold text-slate-500">Premium</div>
         <div class="mt-2 text-4xl font-bold tracking-tight">$799</div>
@@ -440,7 +422,6 @@
 </section>
 
     
-    <!-- SERVICES -->
     <section id="services" class="py-20 bg-[#F7F8FA] text-slate-900">
       <div class="mx-auto max-w-7xl px-5">
         <div class="text-center mb-16">
@@ -450,7 +431,6 @@
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <!-- Service Cards (dejamos colores variados tal como estaban) -->
           <div class="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-accent/20">
             <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-6">
               <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -537,7 +517,6 @@
           </div>
         </div>
 
-        <!-- CTA Section -->
         <div class="mt-16 text-center">
           <div class="bg-slate-900 rounded-3xl p-6 md:p-12">
             <h3 class="text-xl md:text-3xl font-bold text-white mb-3 md:mb-4">Ready to elevate your listings?</h3>
@@ -555,7 +534,6 @@
       </div>
     </section>
 
-<!-- PORTFOLIO -->
 <section id="work" class="portfolio-solid py-20">
   <div class="portfolio-content">
     <div class="mx-auto max-w-7xl px-5">
@@ -569,7 +547,6 @@
       </div>
 
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Cards -->
         <a class="group relative aspect-video overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/20 hover:ring-accent/40 transition-all duration-300" href="#book">
           <div class="absolute inset-0 flex items-center justify-center text-white/70">Video Placeholder</div>
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 transition group-hover:opacity-100"></div>
@@ -605,10 +582,8 @@
   </div>
 </section>
 
-<!-- DJI AVATA / EQUIPMENT -->
 <section id="avata" class="relative bg-gray-50 text-slate-900 pt-20 pb-10 lg:pb-20">
   <div class="mx-auto max-w-7xl px-5">
-    <!-- Header -->
     <header class="mb-8 lg:mb-10 text-center">
       <p class="text-xs font-semibold tracking-widest text-accent uppercase">Equipment</p>
       <h2 class="mt-2 font-display text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
@@ -621,10 +596,8 @@
     </header>
 
 
-<!-- Mobile DJI Avata Section -->
-<section class="relative bg-gray-50 text-slate-900 py-12">
+<section class="relative bg-gray-50 text-slate-900 py-12 lg:hidden">
     <div class="max-w-sm mx-auto">
-        <!-- Header -->
         <header class="mb-8 text-center">
             <p class="text-xs font-semibold tracking-widest text-accent uppercase">Equipment</p>
             <h2 class="mt-2 font-display text-2xl font-semibold tracking-tight text-slate-900">
@@ -635,20 +608,15 @@
             </p>
         </header>
 
-        <!-- Integrated Design Container -->
         <div class="relative">
-            <!-- Background circle for visual cohesion -->
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="w-80 h-80 rounded-full bg-gradient-to-br from-accent/5 to-accent/15 blur-3xl"></div>
             </div>
             
-            <!-- Main content container -->
             <div class="relative z-10 space-y-6">
                 
-                <!-- Drone in center with orbital benefits -->
                 <div class="relative h-72 flex items-center justify-center">
                     
-                    <!-- Central drone container -->
                     <div class="relative z-20">
                         <div class="relative bg-white rounded-full p-4 shadow-xl border border-accent/20">
                             <img
@@ -656,13 +624,10 @@
                                 alt="DJI Avata FPV drone"
                                 class="w-20 h-auto floating-element drop-shadow-lg"
                             />
-                            <!-- Pulsing indicator -->
                             <div class="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full pulse-dot"></div>
                         </div>
                     </div>
                     
-                    <!-- Benefit cards positioned around drone -->
-                    <!-- Top -->
                     <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2">
                         <div class="benefit-card bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-accent/20 w-32 text-center">
                             <div class="text-accent text-xs font-bold mb-1">01</div>
@@ -671,7 +636,6 @@
                         </div>
                     </div>
                     
-                    <!-- Top Right -->
                     <div class="absolute top-8 right-2 translate-x-2">
                         <div class="benefit-card bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-accent/20 w-32">
                             <div class="text-accent text-xs font-bold mb-1">02</div>
@@ -680,7 +644,6 @@
                         </div>
                     </div>
                     
-                    <!-- Bottom Right -->
                     <div class="absolute bottom-8 right-2 translate-x-2">
                         <div class="benefit-card bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-accent/20 w-32">
                             <div class="text-accent text-xs font-bold mb-1">03</div>
@@ -689,7 +652,6 @@
                         </div>
                     </div>
                     
-                    <!-- Bottom -->
                     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-2">
                         <div class="benefit-card bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-accent/20 w-32 text-center">
                             <div class="text-accent text-xs font-bold mb-1">04</div>
@@ -698,7 +660,6 @@
                         </div>
                     </div>
                     
-                    <!-- Bottom Left -->
                     <div class="absolute bottom-8 left-2 -translate-x-2">
                         <div class="benefit-card bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-accent/20 w-32">
                             <div class="text-accent text-xs font-bold mb-1">05</div>
@@ -707,7 +668,6 @@
                         </div>
                     </div>
                     
-                    <!-- Top Left -->
                     <div class="absolute top-8 left-2 -translate-x-2">
                         <div class="benefit-card bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-accent/20 w-32">
                             <div class="text-accent text-xs font-bold mb-1">06</div>
@@ -716,21 +676,18 @@
                         </div>
                     </div>
                     
-                    <!-- Subtle connecting lines -->
                     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
                         <div class="w-48 h-48 border border-accent/10 rounded-full"></div>
                         <div class="absolute w-40 h-40 border border-accent/5 rounded-full"></div>
                     </div>
                 </div>
                 
-                <!-- Bottom info card -->
                 <div class="bg-white rounded-2xl p-6 shadow-lg border border-accent/20 text-center">
                     <h3 class="text-lg font-semibold text-slate-900 mb-2">4K Ultra-HD Camera</h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
                         Professional-grade imaging with advanced stabilization for crystal-clear content that converts viewers into buyers.
                     </p>
                     
-                    <!-- Tech specs -->
                     <div class="mt-4 flex justify-center gap-4 text-xs">
                         <div class="flex items-center gap-1">
                             <div class="w-2 h-2 bg-accent rounded-full"></div>
@@ -751,17 +708,14 @@
     </div>
 </section>
 
-    <!-- DESKTOP (lg+): componente completo con anillos y tarjetas -->
     <div class="hidden lg:block">
       <div class="relative flex justify-center mb-12">
         <div class="relative w-[800px] h-[600px] flex items-center justify-center">
-          <!-- anillos -->
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="w-[400px] h-[400px] border border-accent/20 rounded-full"></div>
             <div class="w-[500px] h-[500px] border border-accent/10 rounded-full absolute"></div>
           </div>
 
-          <!-- imagen central -->
           <div class="relative bg-white rounded-full p-8 border border-accent/30 shadow-2xl z-10">
             <img
               src="https://se-cdn.djiits.com/tpc/uploads/spu/cover/daf2c8fd679eb886c0ba45a1d015a5fc@xlarge.png"
@@ -769,8 +723,6 @@
               class="w-48 h-auto drop-shadow-2xl" />
           </div>
 
-          <!-- tarjetas alrededor -->
-          <!-- Top -->
           <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4">
             <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-accent/30 w-64 text-center">
               <div class="flex items-center justify-center gap-3 mb-3">
@@ -784,7 +736,6 @@
             </div>
           </div>
 
-          <!-- Top Right -->
           <div class="absolute top-12 right-0 translate-x-4">
             <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-accent/30 w-64">
               <div class="flex items-center gap-3 mb-3">
@@ -798,7 +749,6 @@
             </div>
           </div>
 
-          <!-- Bottom Right -->
           <div class="absolute bottom-12 right-0 translate-x-4">
             <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-accent/30 w-64">
               <div class="flex items-center gap-3 mb-3">
@@ -812,7 +762,6 @@
             </div>
           </div>
 
-          <!-- Bottom Center -->
           <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-4">
             <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-accent/30 w-64 text-center">
               <div class="flex items-center justify-center gap-3 mb-3">
@@ -826,7 +775,6 @@
             </div>
           </div>
 
-          <!-- Top Left -->
           <div class="absolute top-12 left-0 -translate-x-4">
             <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-accent/30 w-64">
               <div class="flex items-center gap-3 mb-3">
@@ -840,7 +788,6 @@
             </div>
           </div>
 
-          <!-- Bottom Left -->
           <div class="absolute bottom-12 left-0 -translate-x-4">
             <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-accent/30 w-64">
               <div class="flex items-center gap-3 mb-3">
@@ -856,7 +803,6 @@
         </div>
       </div>
 
-      <!-- Info central -->
       <div class="text-center">
         <h3 class="text-2xl font-semibold text-slate-900 mb-2">4K Ultra-HD Camera</h3>
         <p class="text-slate-600 mb-0 max-w-2xl mx-auto">
@@ -867,8 +813,7 @@
   </div>
 </section>
 
- <!-- FAQ -->
-<section id="faq" class="py-20 bg-gray-50 text-slate-900">
+ <section id="faq" class="py-20 bg-gray-50 text-slate-900">
   <div class="mx-auto max-w-7xl px-5">
     <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">FAQ</h2>
 
@@ -912,11 +857,9 @@
   </div>
 </section>
 
-<!-- ABOUT + BOOK -->
 <section id="about" class="dark-gradient-bg py-20">
   <div class="dark-content">
     <div class="mx-auto max-w-7xl px-5">
-      <!-- ABOUT -->
       <div class="grid items-center gap-10 md:grid-cols-2">
         <div>
           <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">About</h2>
@@ -935,10 +878,8 @@
         </div>
       </div>
 
-      <!-- Ancla -->
       <div id="book" class="pt-24 -mt-24"></div>
 
-      <!-- BOOK / CONTACT -->
       <div class="max-w-6xl mx-auto mt-20">
         <div class="text-center mb-16">
           <p class="text-xs font-semibold tracking-widest text-accent uppercase mb-3">Get Started</p>
@@ -949,9 +890,7 @@
         </div>
 
         <div class="grid lg:grid-cols-2 gap-12">
-          <!-- Left: info -->
           <div class="space-y-8">
-            <!-- Cards -->
             <div class="grid gap-4">
               <div class="bg-gradient-to-br from-accent/20 to-accent/10 backdrop-blur-sm rounded-2xl p-6 ring-1 ring-accent/30">
                 <div class="flex items-center gap-4">
@@ -982,7 +921,6 @@
               </div>
             </div>
 
-            <!-- Highlights -->
             <div class="space-y-6">
               <h3 class="text-xl font-semibold text-white">What to expect:</h3>
               <div class="space-y-4">
@@ -1033,7 +971,6 @@
               </div>
             </div>
 
-            <!-- Quick actions -->
             <div class="flex flex-col sm:flex-row gap-4">
               <a href="mailto:info@cinematicrealtymedia.com" class="flex-1 inline-flex items-center justify-center rounded-xl bg-accent px-6 py-4 font-semibold text-black hover:shadow-soft transition-all duration-300">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1050,7 +987,6 @@
             </div>
           </div>
 
-          <!-- Right: form -->
           <form id="contactForm" class="rounded-2xl bg-white/10 backdrop-blur-sm p-6 md:p-8 ring-1 ring-white/20 w-full">
             <h3 class="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white">Quick Contact</h3>
             <p class="mt-2 text-white/70 text-sm">Tell us about your listing and dates. We'll reply with availability and a clear estimate.</p>
