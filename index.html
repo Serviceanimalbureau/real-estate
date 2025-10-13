@@ -466,87 +466,99 @@
 <section id="work" class="portfolio-solid py-20">
   <div class="portfolio-content">
     <div class="mx-auto max-w-7xl px-5">
-      <div class="mb-8 flex items-end justify-between gap-6">
-        <div>
-          <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">Portfolio</h2>
-          <p class="mt-2 max-w-2xl text-white/80">
-            Selected projects — tap to play.
-          </p>
-        </div>
+      <div class="mb-8">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">Portfolio</h2>
+        <p class="mt-2 max-w-2xl text-white/80">Selected projects — inline playback. Tap to play.</p>
       </div>
 
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Cada tarjeta carga el iframe solo al hacer click -->
-        <div class="group relative aspect-video overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/20 hover:ring-accent/40 transition-all duration-300 yt-card" data-ytid="NZqIi3c-dUo" aria-label="Play video 1">
-          <img src="https://img.youtube.com/vi/NZqIi3c-dUo/hqdefault.jpg" alt="Video 1" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition group-hover:opacity-100"></div>
-          <span class="absolute bottom-3 left-3 rounded-lg bg-white/10 px-2 py-1 text-xs text-white/90 ring-1 ring-white/15">Residential</span>
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="rounded-full bg-white/80 p-3 group-hover:scale-110 transition">
-              <svg class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
+        <!-- 1 -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
+          <div class="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/NZqIi3c-dUo?playsinline=1&rel=0&modestbranding=1&controls=1"
+              title="Portfolio 1"
+              class="w-full h-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
 
-        <div class="group relative aspect-video overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/20 hover:ring-accent/40 transition-all duration-300 yt-card" data-ytid="iB4pQz_Oico" aria-label="Play video 2">
-          <img src="https://img.youtube.com/vi/iB4pQz_Oico/hqdefault.jpg" alt="Video 2" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition group-hover:opacity-100"></div>
-          <span class="absolute bottom-3 left-3 rounded-lg bg-white/10 px-2 py-1 text-xs text-white/90 ring-1 ring-white/15">Commercial</span>
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="rounded-full bg-white/80 p-3 group-hover:scale-110 transition">
-              <svg class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
+        <!-- 2 -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
+          <div class="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/iB4pQz_Oico?playsinline=1&rel=0&modestbranding=1&controls=1"
+              title="Portfolio 2"
+              class="w-full h-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
 
-        <div class="group relative aspect-video overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/20 hover:ring-accent/40 transition-all duration-300 yt-card" data-ytid="YwPtrF-ISzs" aria-label="Play video 3">
-          <img src="https://img.youtube.com/vi/YwPtrF-ISzs/hqdefault.jpg" alt="Video 3" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition group-hover:opacity-100"></div>
-          <span class="absolute bottom-3 left-3 rounded-lg bg-white/10 px-2 py-1 text-xs text-white/90 ring-1 ring-white/15">Luxury</span>
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="rounded-full bg-white/80 p-3 group-hover:scale-110 transition">
-              <svg class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
+        <!-- 3 -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
+          <div class="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/YwPtrF-ISzs?playsinline=1&rel=0&modestbranding=1&controls=1"
+              title="Portfolio 3"
+              class="w-full h-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
 
-        <div class="group relative aspect-video overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/20 hover:ring-accent/40 transition-all duration-300 yt-card" data-ytid="0UveCq_7piE" aria-label="Play video 4">
-          <img src="https://img.youtube.com/vi/0UveCq_7piE/hqdefault.jpg" alt="Video 4" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition group-hover:opacity-100"></div>
-          <span class="absolute bottom-3 left-3 rounded-lg bg-white/10 px-2 py-1 text-xs text-white/90 ring-1 ring-white/15">Development</span>
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="rounded-full bg-white/80 p-3 group-hover:scale-110 transition">
-              <svg class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
+        <!-- 4 -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
+          <div class="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/0UveCq_7piE?playsinline=1&rel=0&modestbranding=1&controls=1"
+              title="Portfolio 4"
+              class="w-full h-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
 
-        <div class="group relative aspect-video overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/20 hover:ring-accent/40 transition-all duration-300 yt-card" data-ytid="48MtVN002JA" aria-label="Play video 5">
-          <img src="https://img.youtube.com/vi/48MtVN002JA/hqdefault.jpg" alt="Video 5" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition group-hover:opacity-100"></div>
-          <span class="absolute bottom-3 left-3 rounded-lg bg-white/10 px-2 py-1 text-xs text-white/90 ring-1 ring-white/15">Estate</span>
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="rounded-full bg-white/80 p-3 group-hover:scale-110 transition">
-              <svg class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
+        <!-- 5 -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
+          <div class="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/48MtVN002JA?playsinline=1&rel=0&modestbranding=1&controls=1"
+              title="Portfolio 5"
+              class="w-full h-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
 
-        <div class="group relative aspect-video overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/20 hover:ring-accent/40 transition-all duration-300 yt-card" data-ytid="mhQCpwSsx4U" aria-label="Play video 6">
-          <img src="https://img.youtube.com/vi/mhQCpwSsx4U/hqdefault.jpg" alt="Video 6" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition group-hover:opacity-100"></div>
-          <span class="absolute bottom-3 left-3 rounded-lg bg-white/10 px-2 py-1 text-xs text-white/90 ring-1 ring-white/15">Modern</span>
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="rounded-full bg-white/80 p-3 group-hover:scale-110 transition">
-              <svg class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
+        <!-- 6 -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
+          <div class="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/mhQCpwSsx4U?playsinline=1&rel=0&modestbranding=1&controls=1"
+              title="Portfolio 6"
+              class="w-full h-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <section id="avata" class="relative bg-gray-50 text-slate-900 pt-20 pb-10 lg:pb-20">
   <div class="mx-auto max-w-7xl px-5">
