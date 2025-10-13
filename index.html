@@ -1136,22 +1136,23 @@
   });
 
   // ===== Quick Contact -> mailto con datos del formulario =====
-  (function () {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
+<script>
+(function () {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const fd = new FormData(form);
-      const name = fd.get('name') || '';
-      const email = fd.get('email') || '';
-      const phone = fd.get('phone') || '';
-      const city = fd.get('city') || '';
-      const portfolio = fd.get('portfolio') || '';
-      const message = fd.get('message') || '';
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const name      = (fd.get('name')      || '').trim();
+    const email     = (fd.get('email')     || '').trim();
+    const phone     = (fd.get('phone')     || '').trim();
+    const city      = (fd.get('city')      || '').trim();
+    const portfolio = (fd.get('portfolio') || '').trim();
+    const message   = (fd.get('message')   || '').trim();
 
-      const subject = `New FPV inquiry — ${city || 'Real estate'} (${portfolio || 'portfolio size'})`;
-      const body =
+    const subject = `FPV inquiry — ${name || 'Prospect'} — ${city || 'Real estate'} (${portfolio || 'portfolio size'})`;
+    const body =
 `Name: ${name}
 Email: ${email}
 Phone: ${phone}
@@ -1163,20 +1164,20 @@ ${message}
 
 — Sent from cinematicrealtymedia.com`;
 
-      const mailto = `mailto:info@cinematicrealtymedia.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // puedes añadir cc/bcc si quieres (ejemplo: a ti mismo)
+    const cc = 'cc=' + encodeURIComponent('info@cinematicrealtymedia.com');
 
-      // Abrir el cliente de correo
-      window.location.href = mailto;
+    const mailto = `mailto:info@cinematicrealtymedia.com?${cc}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
 
-      // Feedback visual rápido en el botón
-      const btn = form.querySelector('button[type="submit"]');
-      if (btn) {
-        const old = btn.innerText;
-        btn.innerText = 'Opening your email app…';
-        setTimeout(() => (btn.innerText = old), 2500);
-      }
-    });
-  })();
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) {
+      const old = btn.innerText;
+      btn.innerText = 'Opening your email app…';
+      setTimeout(() => (btn.innerText = old), 2500);
+    }
+  });
+})();
 
   // Botón y menú
   const menuBtn = document.getElementById('menuBtn');
