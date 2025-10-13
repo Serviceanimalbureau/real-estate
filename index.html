@@ -279,7 +279,6 @@
     </section>
     
 <section id="pricing" class="py-20 bg-[#F7F8FA] text-slate-900">
-<section id="pricing" class="py-20 bg-[#F7F8FA] text-slate-900">
   <div class="mx-auto max-w-7xl px-5">
     <header class="text-center mb-12">
       <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Simple, Transparent Pricing</h2>
@@ -833,9 +832,44 @@
 
             <div class="space-y-6">
               <h3 class="text-xl font-semibold text-white">What to expect:</h3>
-              <!-- bullets (igual) -->
-              <!-- ... -->
-            </div>
+              <ul class="space-y-4">
+              <li class="flex gap-3">
+              <div class="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+             <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    </div>
+    <div>
+      <h4 class="font-semibold text-white">Minimum 3 properties</h4>
+      <p class="text-white/60 text-sm">Efficient scheduling for better pricing</p>
+    </div>
+  </li>
+  <li class="flex gap-3">
+    <div class="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+      <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    </div>
+    <div>
+      <h4 class="font-semibold text-white">48–72 hour delivery</h4>
+      <p class="text-white/60 text-sm">Fast turnaround without compromising quality</p>
+    </div>
+  </li>
+  <li class="flex gap-3">
+    <div class="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+      <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 3h-5.5M21 3v5.5M3 21v-5.5M3 21h5.5"/></svg>
+    </div>
+    <div>
+      <h4 class="font-semibold text-white">Licensed & insured</h4>
+      <p class="text-white/60 text-sm">Professional pilots with full coverage</p>
+    </div>
+  </li>
+  <li class="flex gap-3">
+    <div class="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+      <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/></svg>
+    </div>
+    <div>
+      <h4 class="font-semibold text-white">Multi-city coverage</h4>
+      <p class="text-white/60 text-sm">We travel to serve your markets</p>
+    </div>
+  </li>
+</ul>
 
             <div class="flex flex-col sm:flex-row gap-4">
               <!-- EMAIL BUTTON (English default) -->
@@ -915,12 +949,16 @@
 
 <!-- === SCRIPTS (UNIFICADOS) === -->
 <script>
-  // Mobile menu toggle
+  // ===== Botón y menú (toggle) =====
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
 
-  // Smooth anchor scroll
+  // ===== Scroll suave a anclas =====
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
@@ -931,13 +969,14 @@
     });
   });
 
-  // Quick Contact -> mailto with filled data
+  // ===== Quick Contact -> mailto con datos del form =====
   (function () {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
       const fd = new FormData(form);
       const name      = (fd.get('name')      || '').trim();
       const email     = (fd.get('email')     || '').trim();
@@ -959,10 +998,16 @@ ${message}
 
 — Sent from cinematicrealtymedia.com`;
 
-      const cc = 'cc=' + encodeURIComponent('info@cinematicrealtymedia.com'); // optional
-      const mailto = `mailto:info@cinematicrealtymedia.com?${cc}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
+      const params = new URLSearchParams({
+        subject,
+        body,
+        cc: 'info@cinematicrealtymedia.com' // opcional
+      });
 
+      // Abre el cliente de correo con todo prellenado
+      window.location.href = `mailto:info@cinematicrealtymedia.com?${params.toString()}`;
+
+      // Feedback en el botón
       const btn = form.querySelector('button[type="submit"]');
       if (btn) {
         const old = btn.innerText;
@@ -971,14 +1016,6 @@ ${message}
       }
     });
   })();
-      // Botón y menú
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  // Alternar menú al hacer clic
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
 </script>
 </body>
 </html>
