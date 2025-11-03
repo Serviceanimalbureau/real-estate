@@ -64,6 +64,62 @@
 
       #about{ position:relative; }
       #about::before{ content:""; position:absolute; left:0; right:0; top:-100px; height:100px; background: linear-gradient(to bottom, rgba(247,248,250,1), rgba(15,17,23,0)); pointer-events:none; z-index:1; }
+      /* === FPV REEL === */
+.portfolio-video {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 9 / 16;
+  margin: 10px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+.portfolio-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* === GALERÍA DE FOTOS HDR === */
+.gallery-card {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-scroll img {
+  height: 250px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  object-fit: cover;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-scroll img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
     </style>
   </head>
   <body class="bg-obsidian text-ink font-sans antialiased">
@@ -489,12 +545,13 @@
       </div>
 
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- 1 -->
+
+        <!-- 🎥 1 -->
         <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
           <div class="aspect-video">
             <iframe
               src="https://www.youtube.com/embed/NZqIi3c-dUo?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="Portfolio 1"
+              title="Luxury Mansion in Las Palmas"
               class="w-full h-full"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -503,12 +560,12 @@
           </div>
         </div>
 
-        <!-- 2 -->
+        <!-- 🎥 2 -->
         <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
           <div class="aspect-video">
             <iframe
               src="https://www.youtube.com/embed/iB4pQz_Oico?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="Portfolio 2"
+              title="Secrets Playa del Carmen | Luxury Resort"
               class="w-full h-full"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -517,12 +574,12 @@
           </div>
         </div>
 
-        <!-- 3 -->
+        <!-- 🎥 3 -->
         <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
           <div class="aspect-video">
             <iframe
               src="https://www.youtube.com/embed/YwPtrF-ISzs?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="Portfolio 3"
+              title="Medellin Real Estate | SOLD Property"
               class="w-full h-full"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -531,12 +588,12 @@
           </div>
         </div>
 
-        <!-- 4 -->
+        <!-- 🎥 4 -->
         <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
           <div class="aspect-video">
             <iframe
               src="https://www.youtube.com/embed/0UveCq_7piE?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="Portfolio 4"
+              title="Magic on the Water | FPV + Cinematic"
               class="w-full h-full"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -545,40 +602,42 @@
           </div>
         </div>
 
-        <!-- 5 -->
-      <!-- 🟩 REEL - formato vertical 9:16 -->
-<div class="portfolio-video">
-  <video controls autoplay muted playsinline loop>
-    <source src="https://drive.google.com/uc?export=download&id=1_Hm5AfdYx8pR_i-a0BMLsUkLg6PqLypq" type="video/mp4">
-    Tu navegador no soporta videos.
-  </video>
-</div>
+        <!-- 🎬 5 - FPV Reel (vertical 9:16) -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
+          <div class="portfolio-video">
+            <video controls autoplay muted playsinline loop>
+              <source src="https://drive.google.com/uc?export=view&id=1_Hm5AfdYx8pR_i-a0BMLsUkLg6PqLypq" type="video/mp4">
+              Tu navegador no soporta videos.
+            </video>
+          </div>
+        </div>
 
-
-        <!-- 6 -->
-<!-- 🟦 GALERÍA DE FOTOS HDR -->
-<div class="gallery-card">
-  <div class="gallery-scroll">
-    <img src="https://drive.google.com/uc?export=download&id=1Rpz9st8UhfDlJGzVLeneKqwaMEWXoqTi" alt="HDR 1">
-    <img src="https://drive.google.com/uc?export=download&id=1i6I8ODSGXujDChYveIFWkTW14SMEvlFQ" alt="HDR 2">
-    <img src="https://drive.google.com/uc?export=download&id=1aC7ZQwucVbQyLZutcrBehbmhRSzLdKJ2" alt="HDR 3">
-    <img src="https://drive.google.com/uc?export=download&id=1dp0Un2laOjWhDMOgoG5NQIr0hvPsZn95" alt="HDR 4">
-    <img src="https://drive.google.com/uc?export=download&id=1hQ_13NwCmNtA3Cmps0WnzXYyrk2zJiOV" alt="HDR 5">
-    <img src="https://drive.google.com/uc?export=download&id=1j3XswYfbVtr9j3xLYiICvFWcBD6YPvVx" alt="HDR 6">
-    <img src="https://drive.google.com/uc?export=download&id=1s66BTNDLk6CcIjh4JnaDZpcdnM2LiNnU" alt="HDR 7">
-    <img src="https://drive.google.com/uc?export=download&id=1VaVMz2LwIgsBLsx6AsAj7grO3eLMXbeS" alt="HDR 8">
-    <img src="https://drive.google.com/uc?export=download&id=1OxYgSZm85XkMMjE87CaBXV-Tq4p8zzVp" alt="HDR 9">
-    <img src="https://drive.google.com/uc?export=download&id=170cgaZ8_9gKTyPhGMlkpVrJH59KCyimg" alt="HDR 10">
-    <img src="https://drive.google.com/uc?export=download&id=12HI2lclnRdp46e7OVWpRSGfoIYlJnyXq" alt="HDR 11">
-    <img src="https://drive.google.com/uc?export=download&id=1x1JN5NwibJBHaEb12hUvTsllG8fFx-cr" alt="HDR 12">
-    <img src="https://drive.google.com/uc?export=download&id=1xXGyeG3bdFAjo0OQCmkmOlTSxDKHhRPe" alt="HDR 13">
-  </div>
-</div>
+        <!-- 🖼️ 6 - Galería HDR -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
+          <div class="gallery-card">
+            <div class="gallery-scroll">
+              <img src="https://drive.google.com/uc?export=view&id=1Rpz9st8UhfDlJGzVLeneKqwaMEWXoqTi" alt="HDR 1">
+              <img src="https://drive.google.com/uc?export=view&id=1i6I8ODSGXujDChYveIFWkTW14SMEvlFQ" alt="HDR 2">
+              <img src="https://drive.google.com/uc?export=view&id=1aC7ZQwucVbQyLZutcrBehbmhRSzLdKJ2" alt="HDR 3">
+              <img src="https://drive.google.com/uc?export=view&id=1dp0Un2laOjWhDMOgoG5NQIr0hvPsZn95" alt="HDR 4">
+              <img src="https://drive.google.com/uc?export=view&id=1hQ_13NwCmNtA3Cmps0WnzXYyrk2zJiOV" alt="HDR 5">
+              <img src="https://drive.google.com/uc?export=view&id=1j3XswYfbVtr9j3xLYiICvFWcBD6YPvVx" alt="HDR 6">
+              <img src="https://drive.google.com/uc?export=view&id=1s66BTNDLk6CcIjh4JnaDZpcdnM2LiNnU" alt="HDR 7">
+              <img src="https://drive.google.com/uc?export=view&id=1VaVMz2LwIgsBLsx6AsAj7grO3eLMXbeS" alt="HDR 8">
+              <img src="https://drive.google.com/uc?export=view&id=1OxYgSZm85XkMMjE87CaBXV-Tq4p8zzVp" alt="HDR 9">
+              <img src="https://drive.google.com/uc?export=view&id=170cgaZ8_9gKTyPhGMlkpVrJH59KCyimg" alt="HDR 10">
+              <img src="https://drive.google.com/uc?export=view&id=12HI2lclnRdp46e7OVWpRSGfoIYlJnyXq" alt="HDR 11">
+              <img src="https://drive.google.com/uc?export=view&id=1x1JN5NwibJBHaEb12hUvTsllG8fFx-cr" alt="HDR 12">
+              <img src="https://drive.google.com/uc?export=view&id=1xXGyeG3bdFAjo0OQCmkmOlTSxDKHhRPe" alt="HDR 13">
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
   </div>
 </section>
+
 
 <section id="avata" class="relative bg-gray-50 text-slate-900 pt-20 pb-10 lg:pb-20">
   <div class="mx-auto max-w-7xl px-5">
