@@ -117,7 +117,6 @@
   height: 100%;
 }
 
-/* === Ajuste final: todas las imágenes del carrusel tienen el mismo tamaño que los videos === */
 #work .gallery-card {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -131,7 +130,6 @@
   justify-content: center;
 }
 
-/* El contenedor horizontal */
 #work .gallery-scroll {
   display: flex;
   gap: 8px;
@@ -141,18 +139,37 @@
   width: 100%;
   height: 100%;
   padding: 0 8px;
+  scroll-padding: 8px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Cada imagen dentro del carrusel */
-#work .gallery-scroll img {
-  height: 100%;
-  width: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  flex-shrink: 0;
-  scroll-snap-align: center;
-  border-radius: 12px;
+#work .gallery-scroll::-webkit-scrollbar {
+  display: none;
 }
+
+#work .gallery-scroll img {
+  flex-shrink: 0;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  object-fit: cover;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Mostrar parcialmente la anterior y la siguiente */
+#work .gallery-scroll {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 20%;
+}
+
+#work .gallery-scroll img {
+  width: 80%;
+  margin-right: -20%;
+}
+
 
 
     </style>
@@ -1245,6 +1262,19 @@
       card.appendChild(iframe);
     }, { once: true }); // solo la primera vez
   });
+  
+// --- Carrusel circular (loop visual) ---
+const gallery = document.querySelector('#work .gallery-scroll');
+if (gallery) {
+  const imgs = gallery.querySelectorAll('img');
+  if (imgs.length > 0) {
+    // Clona primera y última imagen para simular loop
+    const firstClone = imgs[0].cloneNode(true);
+    const lastClone = imgs[imgs.length - 1].cloneNode(true);
+    gallery.insertBefore(lastClone, imgs[0]);
+    gallery.appendChild(firstClone);
+  }
+}
 
 </script>
 </body>
