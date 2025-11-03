@@ -288,11 +288,15 @@
     </header>
 
     <div class="grid gap-6 md:grid-cols-3">
+      <!-- Essential -->
       <article class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-200 hover:shadow-xl transition">
         <div class="text-sm font-semibold text-slate-500">Essential</div>
-        <div class="mt-2 text-4xl font-bold tracking-tight">$269</div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span class="text-4xl font-bold tracking-tight">$269</span>
+          <span class="text-sm font-normal text-slate-500">per property</span>
+        </div>
         <ul class="mt-6 space-y-2 text-slate-600">
-          <li>2–3 minute FPV video</li>
+          <li>1–2 minute FPV video</li>
           <li>10 high-res photos</li>
           <li>Basic editing & color correction</li>
           <li>48-hour delivery</li>
@@ -304,14 +308,18 @@
         </a>
       </article>
 
+      <!-- Professional -->
       <article class="relative rounded-2xl bg-white p-8 shadow-xl ring-2 ring-accent/50 hover:shadow-2xl transition">
         <div class="absolute -top-3 right-6 rounded-full bg-accent px-3 py-1 text-xs font-bold text-black shadow">Most Popular</div>
         <div class="text-sm font-semibold text-slate-500">Professional</div>
-        <div class="mt-2 text-4xl font-bold tracking-tight">$469</div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span class="text-4xl font-bold tracking-tight">$469</span>
+          <span class="text-sm font-normal text-slate-500">per property</span>
+        </div>
         <ul class="mt-6 space-y-2 text-slate-600">
-          <li>4–5 minute cinematic FPV video</li>
+          <li>2–3 minute cinematic FPV video</li>
           <li>25 high-res photos</li>
-          <li>3 social media reels</li>
+          <li>1 social media reel</li>
           <li>Advanced editing & music</li>
           <li>24-hour delivery</li>
           <li>3 revisions included</li>
@@ -322,15 +330,19 @@
         </a>
       </article>
 
+      <!-- Premium -->
       <article class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-200 hover:shadow-xl transition">
         <div class="text-sm font-semibold text-slate-500">Premium</div>
-        <div class="mt-2 text-4xl font-bold tracking-tight">$769</div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span class="text-4xl font-bold tracking-tight">$769</span>
+          <span class="text-sm font-normal text-slate-500">per property</span>
+        </div>
         <ul class="mt-6 space-y-2 text-slate-600">
-          <li>6–8 minute signature FPV video</li>
+          <li>2–3 minute signature FPV video</li>
           <li>50 high-res photos</li>
-          <li>5 social media reels</li>
-          <li>3D virtual tour</li>
-          <li>Same-day delivery available</li>
+          <li>2 social media reels</li>
+          <li>3D virtual tour included</li>
+          <li>24-hour delivery</li>
           <li>Unlimited revisions</li>
         </ul>
         <a href="#book"
@@ -340,7 +352,12 @@
       </article>
     </div>
 
-    <div class="mt-10 text-center">
+    <!-- Add-on line BEFORE volume discounts -->
+    <div class="mt-8 text-center">
+      <p class="text-slate-800 font-medium">3D virtual tour (Matterport or Zillow) + <span class="font-semibold">$99</span></p>
+    </div>
+
+    <div class="mt-4 text-center">
       <p class="text-slate-700">
         <strong>Volume Discounts:</strong> 10% off 5+ properties | 15% off 10+ properties | Custom pricing for 20+ properties
       </p>
@@ -367,7 +384,7 @@
               </svg>
             </div>
             <h3 class="text-xl font-semibold mb-3 text-slate-900">FPV Cinematic Tours</h3>
-            <p class="text-slate-600 leading-relaxed mb-4">Continuous 2–5 minute walkthrough capturing exterior and interior in one flowing story. Professional editing with licensed music.</p>
+            <p class="text-slate-600 leading-relaxed mb-4">Continuous 1–3 minute walkthrough capturing exterior and interior in one flowing story. Professional editing with licensed music.</p>
             <div class="flex items-center text-accent text-sm font-medium">
               <span class="w-2 h-2 bg-accent rounded-full mr-2"></span>
               2-5 minutes duration
@@ -382,7 +399,7 @@
               </svg>
             </div>
             <h3 class="text-xl font-semibold mb-3 text-slate-900">Professional Photography</h3>
-            <p class="text-slate-600 leading-relaxed mb-4">20–50 high-resolution HDR photos including interior, exterior, and aerial shots. Ready for MLS and marketing materials.</p>
+            <p class="text-slate-600 leading-relaxed mb-4">High-resolution HDR photos including interior, exterior, and aerial shots. Ready for MLS and marketing materials.</p>
             <div class="flex items-center text-blue-600 text-sm font-medium">
               <span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
               Up to 50 high-res photos
@@ -396,7 +413,7 @@
               </svg>
             </div>
             <h3 class="text-xl font-semibold mb-3 text-slate-900">Social Media Content</h3>
-            <p class="text-slate-600 leading-relaxed mb-4">3–5 vertical reels optimized for Instagram, TikTok, and YouTube Shorts. Includes captions and brand elements.</p>
+            <p class="text-slate-600 leading-relaxed mb-4">Vertical reels optimized for Instagram, TikTok, and YouTube Shorts. Includes captions and brand elements.</p>
             <div class="flex items-center text-purple-600 text-sm font-medium">
               <span class="w-2 h-2 bg-purple-600 rounded-full mr-2"></span>
               Ready for all platforms
@@ -529,32 +546,35 @@
         </div>
 
         <!-- 5 -->
-        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
-          <div class="aspect-video">
-            <iframe
-              src="https://www.youtube.com/embed/48MtVN002JA?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="Portfolio 5"
-              class="w-full h-full"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          </div>
-        </div>
+      <!-- 🟩 REEL - formato vertical 9:16 -->
+<div class="portfolio-video">
+  <video controls autoplay muted playsinline loop>
+    <source src="https://drive.google.com/uc?export=download&id=1_Hm5AfdYx8pR_i-a0BMLsUkLg6PqLypq" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+</div>
+
 
         <!-- 6 -->
-        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/20 bg-black">
-          <div class="aspect-video">
-            <iframe
-              src="https://www.youtube.com/embed/mhQCpwSsx4U?playsinline=1&rel=0&modestbranding=1&controls=1"
-              title="Portfolio 6"
-              class="w-full h-full"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          </div>
-        </div>
+<!-- 🟦 GALERÍA DE FOTOS HDR -->
+<div class="gallery-card">
+  <div class="gallery-scroll">
+    <img src="https://drive.google.com/uc?export=download&id=1Rpz9st8UhfDlJGzVLeneKqwaMEWXoqTi" alt="HDR 1">
+    <img src="https://drive.google.com/uc?export=download&id=1i6I8ODSGXujDChYveIFWkTW14SMEvlFQ" alt="HDR 2">
+    <img src="https://drive.google.com/uc?export=download&id=1aC7ZQwucVbQyLZutcrBehbmhRSzLdKJ2" alt="HDR 3">
+    <img src="https://drive.google.com/uc?export=download&id=1dp0Un2laOjWhDMOgoG5NQIr0hvPsZn95" alt="HDR 4">
+    <img src="https://drive.google.com/uc?export=download&id=1hQ_13NwCmNtA3Cmps0WnzXYyrk2zJiOV" alt="HDR 5">
+    <img src="https://drive.google.com/uc?export=download&id=1j3XswYfbVtr9j3xLYiICvFWcBD6YPvVx" alt="HDR 6">
+    <img src="https://drive.google.com/uc?export=download&id=1s66BTNDLk6CcIjh4JnaDZpcdnM2LiNnU" alt="HDR 7">
+    <img src="https://drive.google.com/uc?export=download&id=1VaVMz2LwIgsBLsx6AsAj7grO3eLMXbeS" alt="HDR 8">
+    <img src="https://drive.google.com/uc?export=download&id=1OxYgSZm85XkMMjE87CaBXV-Tq4p8zzVp" alt="HDR 9">
+    <img src="https://drive.google.com/uc?export=download&id=170cgaZ8_9gKTyPhGMlkpVrJH59KCyimg" alt="HDR 10">
+    <img src="https://drive.google.com/uc?export=download&id=12HI2lclnRdp46e7OVWpRSGfoIYlJnyXq" alt="HDR 11">
+    <img src="https://drive.google.com/uc?export=download&id=1x1JN5NwibJBHaEb12hUvTsllG8fFx-cr" alt="HDR 12">
+    <img src="https://drive.google.com/uc?export=download&id=1xXGyeG3bdFAjo0OQCmkmOlTSxDKHhRPe" alt="HDR 13">
+  </div>
+</div>
+
       </div>
     </div>
   </div>
@@ -833,9 +853,16 @@
             <a href="#book" class="inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2 font-semibold text-black">Start a project</a>
           </div>
         </div>
-        <div class="aspect-video rounded-2xl bg-white/10 backdrop-blur-sm ring-1 ring-white/20 flex items-center justify-center">
-          <div class="text-white/60">Video Preview</div>
-        </div>
+<div class="aspect-video rounded-2xl bg-white/10 backdrop-blur-sm ring-1 ring-white/20 overflow-hidden">
+  <img
+  src="/assets/aboutimage.png"
+  alt="Cinematic Realty Media — behind the scenes"
+  class="h-full w-full object-cover object-[50%_90%] md:object-[50%_80%]"
+  loading="lazy"
+  decoding="async"
+  />
+</div>
+
       </div>
 
       <div id="book" class="pt-24 -mt-24"></div>
@@ -1125,5 +1152,4 @@
 </script>
 </body>
 </html>
-
 
