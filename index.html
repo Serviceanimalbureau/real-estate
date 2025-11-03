@@ -117,33 +117,43 @@
   height: 100%;
 }
 
-/* === Corrección de alineación vertical para la galería (recuadro 6) === */
+/* === Ajuste final: todas las imágenes del carrusel tienen el mismo tamaño que los videos === */
 #work .gallery-card {
-  display: flex;
-  align-items: center;       /* centra verticalmente las imágenes */
-  justify-content: center;   /* centra horizontalmente el scroll */
   aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
   overflow: hidden;
-  background: rgba(0,0,0,0.3);
-  margin: 0;                 /* elimina posible margen vertical */
-  padding: 0;                /* elimina espacio interno extra */
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* El contenedor horizontal */
 #work .gallery-scroll {
   display: flex;
   gap: 8px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  align-items: center;       /* centra las imágenes dentro del área */
+  align-items: center;
+  width: 100%;
+  height: 100%;
   padding: 0 8px;
 }
 
+/* Cada imagen dentro del carrusel */
 #work .gallery-scroll img {
   height: 100%;
+  width: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   flex-shrink: 0;
+  scroll-snap-align: center;
   border-radius: 12px;
 }
+
 
     </style>
   </head>
